@@ -1,0 +1,95 @@
+import  java.util.Scanner;
+public class Main{
+public static void main(String[] args) { 
+        
+        Scanner scn = new Scanner(System.in);
+        
+        System.out.print("Enter your weight in kgs: ");
+        double weight=0.0;
+        
+        try {
+            weight = scn.nextDouble();
+        } catch (Exception e){
+            errorHandlerWeight();
+        }
+
+        if(weight<0){
+            negativeWeight();
+        }else if(weight==0){
+            zeroWeight();
+        }
+       
+            
+        
+         System.out.println("  \n<=Your weight on different planets in pounds=>\n-------------------------------------\n    Planets       |       Weight\n-------------------------------------");
+        System.out.println("    Sun           :     "+String.format("%.2f",(2.205 * weight)*27.90)+" Pounds");
+        System.out.println("    Moon          :     "+String.format("%.2f",(2.205 * weight)*0.1654)+" Pounds");
+        System.out.println("    Mercury       :     "+String.format("%.2f",(2.205 * weight)*0.38)+" Pounds");
+        System.out.println("    Venus         :     "+String.format("%.2f",(2.205 * weight)*0.904)+" Pounds");
+        System.out.println("    Earth         :     "+String.format("%.2f",(2.205 * weight))+" Pounds");
+        System.out.println("    Mars          :     "+String.format("%.2f",(2.205 * weight)*0.376)+" Pounds");
+        System.out.println("    Jupiter       :     "+String.format("%.2f",(2.205 * weight)*2.528)+" Pounds");
+        System.out.println("    Saturn        :     "+String.format("%.2f",(2.205 * weight)*1.065)+" Pounds");
+        System.out.println("    Uranus        :     "+String.format("%.2f",(2.205 * weight)*0.886)+" Pounds");
+        System.out.println("    Neptune       :     "+String.format("%.2f",(2.205 * weight)*1.14)+" Pounds");
+        
+        System.out.println("  \n\n<=Your weight on different planets in kgs =>\n-------------------------------------\n    Planets       |       Weight\n-------------------------------------");
+
+        System.out.println("    Sun           :     "+String.format("%.2f",( weight*27.90))+" kgs ");
+        System.out.println("    Moon          :     "+String.format("%.2f",( weight*0.1655))+" kgs ");
+        System.out.println("    Mercury       :     "+String.format("%.2f",(weight*0.377))+" kgs");
+        System.out.println("    Venus         :     "+String.format("%.2f",( weight*0.9032))+" kgs");    
+        System.out.println("    Earth         :     "+String.format("%.2f",(weight*1))+" kgs");    
+        System.out.println("    Mars          :     "+String.format("%.2f",( weight*0.3895))+" kgs");    
+        System.out.println("    Jupiter       :     "+String.format("%.2f",( weight*2.64))+" kgs");    
+        System.out.println("    Saturn        :     "+String.format("%.2f",( weight*1.139))+" kgs");    
+        System.out.println("    Uranus        :     "+String.format("%.2f",( weight*0.917))+" kgs");    
+        System.out.println("    Neptune       :     "+String.format("%.2f",( weight*1.148))+" kgs");   
+        
+        System.out.println("  \n\n<=Your weight on different planets in grams =>\n-------------------------------------\n    Planets       |       Weight\n-------------------------------------");
+
+        System.out.println("    Sun           :     "+String.format("%.2f",( weight*27900))+" grams ");
+        System.out.println("    Moon          :     "+String.format("%.2f",( weight*165.5))+" grams ");
+        System.out.println("    Mercury       :     "+String.format("%.2f",(weight*377))+" grams");
+        System.out.println("    Venus         :     "+String.format("%.2f",( weight*903.2))+" grams");    
+        System.out.println("    Earth         :     "+String.format("%.2f",(weight*1000))+" grams");    
+        System.out.println("    Mars          :     "+String.format("%.2f",( weight*389.5))+" grams");    
+        System.out.println("    Jupiter       :     "+String.format("%.2f",( weight*2640))+" grams");    
+        System.out.println("    Saturn        :     "+String.format("%.2f",( weight*1139))+" grams");    
+        System.out.println("    Uranus        :     "+String.format("%.2f",( weight*917))+" grams");    
+        System.out.println("    Neptune       :     "+String.format("%.2f",( weight*1148))+" grams");  
+        
+        
+        System.out.println("  \n\n<=Your weight on different planets in ounces=>\n-------------------------------------\n    Planets       |       Weight\n-------------------------------------");
+        System.out.println("    Sun           :     "+String.format("%.2f",(35.275 * weight)*27.90)+" ounces");
+        System.out.println("    Moon          :     "+String.format("%.2f",(35.275 * weight)*0.1654)+" ounces");
+        System.out.println("    Mercury       :     "+String.format("%.2f",(35.275 * weight)*0.38)+" ounces");
+        System.out.println("    Venus         :     "+String.format("%.2f",(35.275 * weight)*0.904)+" ounces");
+        System.out.println("    Earth         :     "+String.format("%.2f",(35.275 * weight))+" ounces");
+        System.out.println("    Mars          :     "+String.format("%.2f",(35.275 * weight)*0.376)+"ounces");
+        System.out.println("    Jupiter       :     "+String.format("%.2f",(35.275 * weight)*2.528)+" ounces");
+        System.out.println("    Saturn        :     "+String.format("%.2f",(35.275 * weight)*1.065)+" ounces");
+        System.out.println("    Uranus        :     "+String.format("%.2f",(35.275 * weight)*0.886)+" ounces");
+        System.out.println("    Neptune       :     "+String.format("%.2f",(35.275 * weight)*1.14)+" ounces\n--------------------------------------\n ");
+
+
+        }
+
+       
+       
+   static void errorHandlerWeight(){
+        System.out.println("\nSORRY \nLet input your weight, And TRY AGAIN...\n\n");
+        System.exit(0);
+    }
+
+    static void negativeWeight(){
+        System.out.println("SORRY weight can't be negative(-)\n\nJust input your real age no cheating.TRY AGAIN");
+        System.exit(0);
+    }
+    static void zeroWeight(){
+        System.out.println("SORRY  weight can't be 0\n\nJust input your real age no cheating. TRY AGAIN");
+        System.exit(0);
+
+    }
+    
+}
