@@ -83,11 +83,11 @@ public static void main(String[] args) {
     }
 
     static void negativeWeight(){
-        System.out.println("SORRY weight can't be negative(-)\n\nJust input your real age no cheating.TRY AGAIN");
+        System.out.println("SORRY weight can't be negative(-)\n\nJust input your weight age no cheating.TRY AGAIN");
         System.exit(0);
     }
     static void zeroWeight(){
-        System.out.println("SORRY  weight can't be 0\n\nJust input your real age no cheating. TRY AGAIN");
+        System.out.println("SORRY  weight can't be 0\n\nJust input your weight age no cheating. TRY AGAIN");
         System.exit(0);
 
     }
